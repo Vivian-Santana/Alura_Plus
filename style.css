@@ -1,0 +1,52 @@
+/*variáveis*/
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+}
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+}
+
+.container__principal {
+    background-image: url(/img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/*botão âncora*/
+
+#botao {
+    border-radius: 5px;
+    padding: 1em; /*em medida relativa, tamanho da fonte */
+    color: var(--branco-principal);
+    display: block;
+}
+.container__botao {
+    background-color: var(--botao-azul);    
+}
+
+.container__botao__secundario {
+    background-color: transparent;
+    
+    border: 2px solid var(--branco-principal);
+    color: var(--branco-principal);
+}
+
+.container__aviso {
+    color: var(--branco-principal);
+}
