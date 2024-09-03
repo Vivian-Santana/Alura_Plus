@@ -4,6 +4,10 @@
     --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
+    --hover-botoes:#052fa3;
+    --active-links:purple;
+
+    --fonte-principal: 'Inter';
 }
 
 /*Reset CSS*/
@@ -17,6 +21,9 @@
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .container__principal {
@@ -26,27 +33,156 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: center; /*alinha não só o texto mas tds os elemntos dentro de um bloco*/
+    margin-left: 5em;
 }
 
-/*botão âncora*/
+/*botões âncora*/
 
+/*id botão mantém as propriedades comuns a todos os botões*/
 #botao {
     border-radius: 5px;
     padding: 1em; /*em medida relativa, tamanho da fonte */
     color: var(--branco-principal);
-    display: block;
-}
-.container__botao {
-    background-color: var(--botao-azul);    
+    margin-bottom: 1em;
 }
 
+/*Botão Assine por 12x de R$ 120,00*/
+.container__botao__azul {
+    display: block;
+    background-color: var(--botao-azul);
+}
+
+/*Botão Assinar somente o Alura+*/
 .container__botao__secundario {
+    display: block;
     background-color: transparent;
-    
     border: 2px solid var(--branco-principal);
     color: var(--branco-principal);
 }
 
+/*Botão Assinar o combo+*/
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: var(--botao-azul);
+}
+
+#botao:hover {
+    background-color:var(--hover-botoes);
+    color: var(--botao-azul);
+}
+
+#botao:active {
+    background-color:var(--branco-principal);
+}
+
 .container__aviso {
     color: var(--branco-principal);
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0 ;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+    margin: 0 6em;
+}
+
+.container__secundario {
+    display: flex;
+    align-items: center;
+    margin: 0 10em;
+    margin-bottom: 10em;
+
+}
+
+.descricao__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+/*section 3*/
+.dispositivos__lista {
+    display:flex;
+    justify-content: center;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+    margin-bottom: 10em;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--branco-principal);
+    margin-bottom: 1em;
+}
+
+.lista__intem {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/*Rodapé*/
+.rodape {
+    text-align: center;
+    margin: 5em 3em ;
+}
+
+.rodape__ul {
+   display:flex;
+   justify-content: center;
+   margin: 2em;
+   
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+/* Adiciona um espaço de 1em à esquerda e à direita de cada <li> */
+.lista__link {
+    margin: 0 1em;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    font-weight: 300;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul); /* muda a cor quando o cursor passar por cima */
+}
+
+/*muda a cor quando clicar no link*/
+.lista__link a:active {
+    color: var(--active-links);
 }
